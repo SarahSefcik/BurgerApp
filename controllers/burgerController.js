@@ -42,7 +42,7 @@ router.put("api/burgs/:id", function(req, res) {
   });
 });
 
-router.delete(condition, function(result) {
+router.delete("api/burgs/:id", function(result) {
   var condition = "id = " + req.params.id;
 
   burg.delete(condition, function(result) {
