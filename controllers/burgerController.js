@@ -26,5 +26,33 @@ router.post("/api/burgs", function(req, res) {
   });
 });
 
+router.put("api/burgs/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  console.log("condition", condition);
+
+  burg.update({
+    plain: req.body.plain
+  }, condition, function(result) {
+    if (result.changedRows == 0) {
+      return res.status(404).end();
+    }else {
+      res.status(200).end();
+    }
+  });
+});
+
+router.delete(condition, function(result) {
+  var condition = "id = " + req.params.id;
+
+  burg.delete(condition, function(result) {
+    if (result.affectedRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
 
 // Export routes for server.js
+module.exports = router;
