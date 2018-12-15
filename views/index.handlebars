@@ -1,0 +1,38 @@
+<h1>Burgers!</h1>
+
+<h2>Burgers that are not plain.</h2>
+
+<ul>
+  {{#each burgs}}
+    {{#unless plain}}
+      {{> burgs/burg-block plain=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers that are plain</h2>
+
+<ul>
+  {{#each burgs}}
+    {{#if plain}}
+      {{> burgs/burg-block plain=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="plain">Plain?</label><br>
+    <input type="radio" name="plain" value="1" checked> Plain!<br>
+    <input type="radio" name="plain" value="0"> You want condiments
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
