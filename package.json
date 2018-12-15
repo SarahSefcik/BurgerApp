@@ -1,0 +1,19 @@
+{
+  "name": "burgerapp",
+  "version": "1.0.0",
+  "description": "burger app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SarahSefcik/BurgerApp.git"
+  },
+  "author": "Sarah Sefcik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SarahSefcik/BurgerApp/issues"
+  },
+  "homepage": "https://github.com/SarahSefcik/BurgerApp#readme"
+}
